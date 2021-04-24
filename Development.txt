@@ -1,0 +1,41 @@
+CS 225 Data Structures Final Project
+DEVELOPMENTS
+ 
+Week 1: Nov 15, 2020 – Nov 21, 2020
+From Week 1, we first decided on the functions to have in our program in order for it to produce a movie recommendation. Our 
+initial idea was to have a graph with different movies as nodes with edges connecting movies sharing the same genre in a 
+certain pattern. User can input one genre or more to produce a recommendation output in vector of strings. Dijkstra’s algorithm 
+can be used to find preferred movies with two or more genres and priority queue can be used to rank each movie’s ratings, which 
+affects the way each node is connected to one another. After a meeting with group mentor, Alex Shi, we decided to discard the 
+priority queue implementation because the rating will only be partially ordered. So, we decided on making a base graph class 
+and adding two derived graph class with different movies as nodes. The first graph has number of common actors as edges and 
+the second has common genre as edges. Recommendation can also be generated based on search history. Graphic output of the graph 
+is decided to be done using force-directed graph drawing algorithm.
+
+Week 2: Nov 22, 2020 – Nov 28, 2020
+The header files for our program were built and pushed: the base class graph.h, the derived classes actor_graph.h and 
+genre_graph.h and the files to define vertex and edges, which is structures.h .
+
+Week 3: Nov 29, 2020 – Dec 5, 2020
+Distributed the main functions between each member:
+o   makeGraph(): Arsam
+o   BFS_traversal(): Hadi
+o   addVertex(): Mustafa
+o   addEdge(): Ridhwan
+
+Week 4: Dec 6, 2020 - Dec 11, 2020
+Wrote all the functions needed to make our project work:
+o   dijkstras algorithm
+o   force directed graph drawing
+o   search engine functions
+o   constructors
+o   main fucntion and all its helper functions in main.cpp
+
+Furthermore, we also added tests to out project and finsihed our makefile. Using both of them we tested individual functions 
+in our code base and ensured proper functionality before integrating them together in our main.cpp file and creating a 
+command line user interface via which our program will run until requested to quit. 
+We also updated our makefile to be able to generate 2 executables:
+1- test, which contains all our tests and will run them all together while giving out the result on the commans line terminal
+2- project, our entire program together with its user interface to make a useable tool for any user with all its functionality 
+explained at the start of the execution.
+
